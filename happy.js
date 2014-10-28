@@ -89,7 +89,11 @@
                   }
 
                   // write it back to the field
-                  el.val(val);
+                  // if val has changed
+                  originVal = el.val()
+                  if (originVal !== val) {
+                      el.val(val);
+                  }
                 }
 
                 // get the value
